@@ -1,0 +1,76 @@
+!/usr/bin/env python
+# -*- coding: utf-8 -*-
+
+#author: Janssen dos Reis Lima
+#Customizacoes: Edison Jr
+
+from pyzabbix import ZabbixAPI
+import csv
+import time
+import os
+from easysnmp import Session
+import itertools
+
+
+#Login na API do Zabbix ALTERAR PARA VAULT
+zapi = ZabbixAPI("http://localhost/")
+zapi.login(user="user", password="password")
+
+
+#arq = csv.reader(open('/tmp/hosts.csv'))
+arq = csv.reader(open('/tmp/lista_host.csv'))
+linhas = sum(1 for linha in arq)
+f = csv.reader(open('/tmp/lista_hosts.csv'), delimiter=';')
+#f = csv.reader(open('/tmp/hosts.csv'), delimiter=';')
+
+#for configurado para 4 colunas
+for [hostname,ipwan,iplan,iptelefonia] in f:
+     result = zapi.host.get(filter={"name": hostname})
+     host_zabbix = [host['name'] for host in result]
+     #Condicional para saber se o host já esta cadastrado no Zabbix
+     if hostname in host_zabbix:
+        print "Host " + str(hostname) + " já existe"
+     else:
+	hostcriado = zapi.host.create(
+        host= iplan,
+        name= hostname,
+        status= 1,
+        description= "Criado automaticamente por auto registro",
+#        proxy_hostid= 10227,
+        interfaces=[{
+            "type": 2,
+              "main": "1",
+              "useip": 1,
+              "ip": iplan,
+              "dns": "",
+              "port": 10050
+        },
+         {
+            "type": 2,
+              "main": "0",
+              "useip": 1,
+              "ip": iptelefonia,
+              "dns": "",
+              "port": 161
+        }],
+        groups=[{
+            "groupid": 20
+        },
+        {
+            "groupid": 17
+        }  
+        ],
+        templates=[{
+            "templateid":10273
+        },
+        {
+            "templateid":10270
+        } 
+        ],
+    )
+
+
+        print "Host " + str(hostname) + " criado"
+     
+
+print "Finalizado com sucesso"
