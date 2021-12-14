@@ -1,0 +1,89 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+from pyzabbix import ZabbixAPI
+import csv
+import time
+import os
+import itertools
+os.getenv('arquivo')
+
+#Login no zabbix
+#zapi = ZabbixAPI("http://localhost/zabbix")							#HML
+zapi = ZabbixAPI("http://localhost/zabbix")							#PRD
+#zapi.login(user="user", password="password")
+zapi.login(user="user", password="password")
+
+#Lê o conteúdo do arquivo lista_hosts.csv e o armazena na lista_hosts
+#lista_hosts = csv.reader(open('/tmp/lista_hosts.csv'),delimiter=';') 	COMENTADO PARA RODAR NO JENKINS
+lista_hosts = os.getenv("arquivo").split("\n")							#CRIADO PARA RODAR NO JENKINS
+
+#Percorre o conteúdo do arquivo e cadastra um host a cada linha lida.
+for linha in lista_hosts:
+    host = linha.split(";")
+    result = zapi.host.get(filter={"name": host[0]})
+    host_zabbix = [host['name'] for host in result]
+    if host[0] in host_zabbix:
+        print("Host " + str(host[0]) + " já existe")
+    else:
+    # O bloco abaixo valida se o valor de IP telefonia é vazio para o cadastro do IP das interfaces.
+    #Essa validação é necessária para evitar que, nos casos de equipamentos sem IP de telefonia,
+    #o script não tente cadastrar uma interface sem IP, o que retornaria erro.
+        if host[2] == "":
+            criarHost = zapi.host.create(
+                host=host[1],
+                name=host[0],
+                status=0,
+                description="Criado automaticamente por auto registro",
+                #groups=[{"groupid": 00}],   HML
+                groups=[{"groupid": 00}],
+                #templates=[{"templateid": 0000}],  	HML
+                templates=[{"templateid": 0000}],  	#PRD
+                proxy_hostid=00000,
+                interfaces=[{"type": 2, "main": 1, "useip": 1, "ip": host[1], "dns": "", "port": 161},
+                            {"type": 2, "main": 0, "useip": 1, "ip": host[1], "dns": "", "port": 161}],
+                inventory_mode=0,
+                inventory={"location_lat": host[3],"location_lon": host[4]}
+            )
+        else:
+            criarHost = zapi.host.create(
+                host=host[1],
+                name=host[0],
+                status=0,
+                description="Criado automaticamente por auto registro",
+                #groups=[{"groupid": 00}],			HML
+                groups=[{"groupid": 00}],
+                #templates=[{"templateid": 00000}],  HML
+                templates=[{"templateid": 00000}],
+                interfaces=[{"type": 2, "main": 1, "useip": 1, "ip": host[1], "dns": "", "port": 161},
+                            {"type": 2, "main": 0, "useip": 1, "ip": host[2], "dns": "", "port": 161}],
+                proxy_hostid=00000,
+                inventory_mode=0,
+                inventory={"location_lat": host[3], "location_lon": host[4]}
+            )
+        #Busca e armazena o id da última trigger de indisponível cadastrada para a associação da mesma no SLA do respectivo host
+        result = zapi.trigger.get(filter={"description": "{HOST.NAME} - Indisponível","host": host[1]})
+        trgSla = [trigger['triggerid'] for trigger in result]
+
+        criarSLA = zapi.service.create(
+            parentid=1,
+            name=host[0],
+            algorithm=1,
+            showsla=1,
+			sortorder=0,
+			goodsla=99.99,
+			triggerid=trgSla[0]
+        )
+        # Busca e armazena o id do último serviço cadastrado para a associação do mesmo ao respectivo uptime
+        result = zapi.service.get(filter={"name": host[0]})
+        svcTempo = [service['serviceid'] for service in result]
+
+        criarTempo = zapi.service.addtimes(
+            serviceid=svcTempo[0],
+            ts_from=115200,
+            ts_to=496800,
+            type=0
+        )
+
+        print("host " + str(host[0]) + " cadastrado")
+print("\n")
