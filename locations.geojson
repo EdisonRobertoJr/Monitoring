@@ -14,5 +14,20 @@
     "timezone":-5,
     "dst":"1"
     }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -84.386330,33.753746 ]
+    },
+    "properties": {
+    "zip":210,
+    "city":"Atlanta",
+    "state":"NH",
+    "timezone":-5,
+    "dst":"1"
+    }
   }
+      
    ]}
