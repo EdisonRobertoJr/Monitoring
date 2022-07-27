@@ -51,22 +51,5 @@
     "properties": {
     "DC":"Goppingen"
     }
-  },
-  {
-      "type": "Feature",
-      "properties": {},
-      "geometry": {
-        "type": "LineString",
-        "coordinates": [
-          [
-            8.96484375,
-            50.064191736659104
-          ],
-          [
-            140.9765625,
-            37.996162679728116
-          ]
-        ]
-      }
-    }
+  }
   ]}
