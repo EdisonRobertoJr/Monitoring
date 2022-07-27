@@ -35,7 +35,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 1.290270,103.851959 ]
+       "coordinates":  [ 103.851959,1.290270 ]
     },
     "properties": {
     "city":"Singapore"
