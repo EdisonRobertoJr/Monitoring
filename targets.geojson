@@ -5,7 +5,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 33.76755460098981, -84.38786908464151 ]
+       "coordinates":  [ -84.38786908464151,33.76755460098981 ]
     },
     "properties": {
     "DC":"Atlanta-BO"
@@ -35,7 +35,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 27.92223860199225, -82.71398101883848 ]
+       "coordinates":  [ -82.71398101883848,7.92223860199225  ]
     },
     "properties": {
     "city":"Clearwater"
@@ -45,7 +45,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 39.65401602396693, 20.8475159808861 ]
+       "coordinates":  [ 20.8475159808861,39.65401602396693 ]
     },
     "properties": {
     "city":"Ioannina"
@@ -65,7 +65,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 48.30667538029114, 14.290234524276267 ]
+       "coordinates":  [ 14.290234524276267,48.30667538029114 ]
     },
     "properties": {
     "city":"Linz"
@@ -75,7 +75,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 19.180461489545234, 72.83564134224247 ]
+       "coordinates":  [ 72.83564134224247,19.180461489545234 ]
     },
     "properties": {
     "city":"Mumbai"
@@ -95,7 +95,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 41.17660911512703, -8.651039264954647 ]
+       "coordinates":  [ -8.651039264954647,41.17660911512703  ]
     },
     "properties": {
     "city":"Porto"
@@ -105,7 +105,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 31.260700777935696, 121.47112564080314 ]
+       "coordinates":  [ 121.47112564080314,31.260700777935696 ]
     },
     "properties": {
     "city":"Shanghai"
@@ -115,7 +115,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 1.2810377833140045, 103.84080698621317 ]
+       "coordinates":  [ 103.84080698621317,1.2810377833140045 ]
     },
     "properties": {
     "city":"Singapore - BO"
@@ -125,7 +125,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 35.70451478999251, 139.80837188378604 ]
+       "coordinates":  [ 139.80837188378604,35.70451478999251 ]
     },
     "properties": {
     "city":"Tokyo"
@@ -135,7 +135,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 48.74320853805791, 9.112478728145893 ]
+       "coordinates":  [ 9.112478728145893,48.74320853805791  ]
     },
     "properties": {
     "city":"Vaihingen"
