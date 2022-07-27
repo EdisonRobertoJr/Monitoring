@@ -28,7 +28,7 @@
        "coordinates":  [ 8.682127,50.110924 ]
     },
     "properties": {
-    "city":"Frankfurt",
+    "city":"Frankfurt"
     }
   },
    {
@@ -38,7 +38,7 @@
        "coordinates":  [ 1.290270,103.851959 ]
     },
     "properties": {
-    "city":"Singapore",
+    "city":"Singapore"
     }
   },
    {
@@ -48,7 +48,7 @@
        "coordinates":  [ 9.65209,48.70354 ]
     },
     "properties": {
-    "city":"Goppingen",
+    "city":"Goppingen"
     }
   }
   ]}
