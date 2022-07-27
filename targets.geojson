@@ -69,8 +69,9 @@
     },
     "properties": {
     "city":"Linz"
+	}
   },
-      {
+  {
     "type": "Feature",
     "geometry": {
        "type": "Point",
@@ -80,7 +81,7 @@
     "city":"Mumbai"
     }
   },
-        {
+  {
     "type": "Feature",
     "geometry": {
        "type": "Point",
@@ -90,7 +91,7 @@
     "city":"Munich"
     }
   },
-          {
+  {
     "type": "Feature",
     "geometry": {
        "type": "Point",
@@ -110,7 +111,7 @@
     "city":"Shanghai"
     }
   },
-          {
+  {
     "type": "Feature",
     "geometry": {
        "type": "Point",
@@ -120,7 +121,7 @@
     "city":"Singapore - BO"
     }
   },
-          {
+  {
     "type": "Feature",
     "geometry": {
        "type": "Point",
@@ -130,7 +131,7 @@
     "city":"Tokyo"
     }
   },
-          {
+  {
     "type": "Feature",
     "geometry": {
        "type": "Point",
@@ -139,5 +140,5 @@
     "properties": {
     "city":"Vaihingen"
     }
-  }
+	}
   ]}
