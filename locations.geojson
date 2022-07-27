@@ -38,7 +38,8 @@
        "coordinates":  [ 103.851959,1.290270 ]
     },
     "properties": {
-    "DC":"Singapore"
+    "DC":"Singapore",
+    "marker-size": "large"
     }
   },
    {
