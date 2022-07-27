@@ -8,7 +8,7 @@
        "coordinates":  [ -84.38786908464151,33.76755460098981 ]
     },
     "properties": {
-    "DC":"Atlanta-BO"
+    "Office":"Atlanta-BO"
     }
   },
   {
@@ -18,7 +18,7 @@
        "coordinates":  [ 13.464084843677819,52.53410204620315 ]
     },
     "properties": {
-    "city":"Berlin"
+    "Office":"Berlin"
     }
   },
   {
@@ -28,17 +28,17 @@
        "coordinates":  [ 8.776490230450197,53.08768934425016 ]
     },
     "properties": {
-    "city":"Bremem"
+    "Office":"Bremem"
     }
   },
    {
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ -82.71398101883848,7.92223860199225  ]
+       "coordinates":  [ -82.7133853317511,27.921866488160536  ]
     },
     "properties": {
-    "city":"Clearwater"
+    "Office":"Clearwater"
     }
   },
    {
@@ -48,7 +48,7 @@
        "coordinates":  [ 20.8475159808861,39.65401602396693 ]
     },
     "properties": {
-    "city":"Ioannina"
+    "Office":"Ioannina"
     }
   },
   {
@@ -58,7 +58,7 @@
        "coordinates":  [ 8.466576915074732,48.99927800149314 ]
     },
     "properties": {
-    "city":"Karlsruhe"
+    "Office":"Karlsruhe"
     }
   },
   {
@@ -68,7 +68,7 @@
        "coordinates":  [ 14.290234524276267,48.30667538029114 ]
     },
     "properties": {
-    "city":"Linz"
+    "Office":"Linz"
 	}
   },
   {
@@ -78,7 +78,7 @@
        "coordinates":  [ 72.83564134224247,19.180461489545234 ]
     },
     "properties": {
-    "city":"Mumbai"
+    "Office":"Mumbai"
     }
   },
   {
@@ -88,7 +88,7 @@
        "coordinates":  [ 11.588874891969331,48.167447068842584 ]
     },
     "properties": {
-    "city":"Munich"
+    "Office":"Munich"
     }
   },
   {
@@ -98,7 +98,7 @@
        "coordinates":  [ -8.651039264954647,41.17660911512703  ]
     },
     "properties": {
-    "city":"Porto"
+    "Office":"Porto"
     }
   },
           {
@@ -108,7 +108,7 @@
        "coordinates":  [ 121.47112564080314,31.260700777935696 ]
     },
     "properties": {
-    "city":"Shanghai"
+    "Office":"Shanghai"
     }
   },
   {
@@ -118,7 +118,7 @@
        "coordinates":  [ 103.84080698621317,1.2810377833140045 ]
     },
     "properties": {
-    "city":"Singapore - BO"
+    "Office":"Singapore - BO"
     }
   },
   {
@@ -128,7 +128,7 @@
        "coordinates":  [ 139.80837188378604,35.70451478999251 ]
     },
     "properties": {
-    "city":"Tokyo"
+    "Office":"Tokyo"
     }
   },
   {
@@ -138,7 +138,7 @@
        "coordinates":  [ 9.112478728145893,48.74320853805791  ]
     },
     "properties": {
-    "city":"Vaihingen"
+    "Office":"Vaihingen"
     }
 	}
   ]}
