@@ -15,7 +15,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 52.53410204620315, 13.464084843677819 ]
+       "coordinates":  [ 13.464084843677819,52.53410204620315 ]
     },
     "properties": {
     "city":"Berlin"
@@ -25,7 +25,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 53.08768934425016, 8.776490230450197 ]
+       "coordinates":  [ 8.776490230450197,53.08768934425016 ]
     },
     "properties": {
     "city":"Bremem"
@@ -55,7 +55,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 48.99927800149314, 8.466576915074732 ]
+       "coordinates":  [ 8.466576915074732,48.99927800149314 ]
     },
     "properties": {
     "city":"Karlsruhe"
@@ -85,7 +85,7 @@
     "type": "Feature",
     "geometry": {
        "type": "Point",
-       "coordinates":  [ 48.167447068842584, 11.588874891969331 ]
+       "coordinates":  [ 11.588874891969331,48.167447068842584 ]
     },
     "properties": {
     "city":"Munich"
