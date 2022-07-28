@@ -140,5 +140,15 @@
     "properties": {
     "Office":"Vaihingen"
     }
-	}
+	},
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 138.59853630059723,-34.92115497228296 ]
+    },
+    "properties": {
+    "Office":"Adelaide"
+    }
+  }
   ]}
