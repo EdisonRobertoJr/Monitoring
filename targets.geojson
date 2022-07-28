@@ -150,5 +150,25 @@
     "properties": {
     "Office":"Adelaide"
     }
+  },
+  {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -78.36751564839889,36.68351512960301 ]
+    },
+    "properties": {
+    "Cloud":"Azure eUS"
+    }
+  },
+	     {
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ 4.95787396276107,52.363214856865746 ]
+    },
+    "properties": {
+    "Cloud":"Azure EU"
+    }
   }
   ]}
