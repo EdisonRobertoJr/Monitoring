@@ -170,5 +170,15 @@
     "properties": {
     "Cloud":"Azure EU"
     }
+  },
+{
+    "type": "Feature",
+    "geometry": {
+       "type": "Point",
+       "coordinates":  [ -103.349609,20.659699 ]
+    },
+    "properties": {
+    "Office":"Guadalajara"
+    }
   }
   ]}
